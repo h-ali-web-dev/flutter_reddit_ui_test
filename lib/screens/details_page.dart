@@ -101,10 +101,6 @@ class _DetailsPageState extends State<DetailsPage> {
               ),
             ),
             Container(
-              // decoration: BoxDecoration(
-              //   color: Colors.grey,
-              //   backgroundBlendMode: BlendMode.darken,
-              // ),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,8 +136,75 @@ class _DetailsPageState extends State<DetailsPage> {
                 ],
               ),
             ),
+            Divider(),
+            CommentWidget(childNum: 0),
+            CommentWidget(childNum: 1),
+            CommentWidget(childNum: 2),
+            CommentWidget(childNum: 3),
+            CommentWidget(childNum: 4),
+            CommentWidget(childNum: 5),
+            CommentWidget(childNum: 0),
+            CommentWidget(childNum: 1),
+            CommentWidget(childNum: 2),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CommentWidget extends StatelessWidget {
+  CommentWidget({
+    this.childNum = 0,
+    super.key,
+  });
+  int childNum;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(border: Border(left: BorderSide(width: 2))),
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.only(
+        left: childNum * 20,
+      ),
+      child: Column(
+        children: [
+          ListTile(
+            leading: CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.green,
+            ),
+            title: Text("u/username - time"),
+            dense: true,
+            visualDensity: VisualDensity.compact,
+          ),
+          Text(
+            "CommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentCommentComment",
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(2),
+                  child: Icon(Icons.more_vert),
+                ),
+                Container(
+                  padding: EdgeInsets.all(2),
+                  child: Row(
+                    children: [
+                      Icon(Icons.arrow_circle_up),
+                      Text('123'),
+                      Icon(Icons.arrow_circle_down),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

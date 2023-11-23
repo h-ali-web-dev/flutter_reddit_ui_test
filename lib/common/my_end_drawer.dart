@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reddit_ui_test/screens/setting_page.dart';
+import 'package:get/get.dart';
 
 Drawer myEndDrawer() => Drawer(
       child: SingleChildScrollView(
@@ -15,8 +17,9 @@ Drawer myEndDrawer() => Drawer(
               width: 200,
               margin: EdgeInsets.only(bottom: 20),
               decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(50),),
+                border: Border.all(),
+                borderRadius: BorderRadius.circular(50),
+              ),
               child: TextButton(
                 onPressed: () {},
                 child: Text("Online Status: Off"),
@@ -95,6 +98,9 @@ Drawer myEndDrawer() => Drawer(
                 ListTile(
                   leading: Icon(Icons.settings),
                   title: Text("Settings"),
+                  onTap: () {
+                    Get.to(SettingPage());
+                  },
                 ),
               ],
             ),
