@@ -6,6 +6,7 @@ import 'package:flutter_reddit_ui_test/common/my_menubar.dart';
 import 'package:flutter_reddit_ui_test/common/my_navigationbar.dart';
 import 'package:flutter_reddit_ui_test/common/my_list_header.dart';
 import 'package:flutter_reddit_ui_test/controller/state_controller.dart';
+import 'package:flutter_reddit_ui_test/screens/search_page.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,7 +31,16 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: myMenuBar(),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => SearchPage(),
+                ),
+              );
+            },
+            icon: Icon(Icons.search),
+          ),
           IconButton(
             onPressed: () {
               _openEndDrawer();

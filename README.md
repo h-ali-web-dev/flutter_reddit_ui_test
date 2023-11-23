@@ -1,16 +1,11 @@
 # flutter_reddit_ui_test
 
-A new Flutter project.
+A Simple clone of Reddit's mobile app ui made in flutter.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![home](assets/readme_assets/home.png)
+![detailsPage](assets/readme_assets/detailsPage.png)
+![drawer](assets/readme_assets/drawer.png)
+![endDrawer](assets/readme_assets/endDrawer.png)
+![LightMode](assets/readme_assets/lightMode.png)
+![searchPage](assets/readme_assets/searchPage.png)
