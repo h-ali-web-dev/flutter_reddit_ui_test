@@ -6,8 +6,12 @@ class CardPost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(width: 2, color: Colors.grey.withAlpha(100)),
+        ),
+      ),
       padding: EdgeInsets.all(10),
-      color: Colors.green,
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -47,10 +51,6 @@ class CardPost extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey.withAlpha(150),
-                  ),
                   child: Row(
                     children: [
                       Icon(Icons.arrow_circle_up),
@@ -61,10 +61,6 @@ class CardPost extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey.withAlpha(150),
-                  ),
                   child: Row(
                     children: [
                       Icon(Icons.message),
@@ -74,13 +70,9 @@ class CardPost extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey.withAlpha(150),
-                  ),
                   child: Row(
                     children: [
-                      Icon(Icons.share),
+                      Icon(Icons.reply),
                       Text('Share'),
                     ],
                   ),

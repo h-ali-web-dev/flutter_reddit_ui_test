@@ -25,11 +25,19 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
       destinations: [
         NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
         NavigationDestination(
-            icon: Icon(Icons.person_pin_rounded), label: 'Community',),
-        NavigationDestination(icon: Icon(Icons.add), label: 'Create'),
-        NavigationDestination(icon: Icon(Icons.chat), label: 'Chat'),
+          enabled: false,
+          icon: Icon(Icons.person_pin_rounded),
+          label: 'Community',
+        ),
         NavigationDestination(
-            icon: Icon(Icons.notifications_none), label: 'Inbox',),
+            enabled: false, icon: Icon(Icons.add), label: 'Create'),
+        NavigationDestination(
+            enabled: false, icon: Icon(Icons.chat), label: 'Chat'),
+        NavigationDestination(
+          enabled: false,
+          icon: Icon(Icons.notifications_none),
+          label: 'Inbox',
+        ),
       ],
     );
   }

@@ -42,7 +42,7 @@ class SettingPage extends StatelessWidget {
               onSelected: (i) {
                 stateController.isCardView.value = i == 2 ? true : false;
               },
-              initialSelection: 1,
+              initialSelection: stateController.isCardView.value ? 2 : 1,
               inputDecorationTheme:
                   InputDecorationTheme(border: InputBorder.none),
               menuStyle: MenuStyle(

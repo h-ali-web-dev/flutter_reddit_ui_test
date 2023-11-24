@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reddit_ui_test/common/card_post.dart';
 import 'package:flutter_reddit_ui_test/common/list_post.dart';
 import 'package:flutter_reddit_ui_test/common/my_drawer.dart';
 import 'package:flutter_reddit_ui_test/common/my_end_drawer.dart';
@@ -63,7 +64,13 @@ class _HomePageState extends State<HomePage> {
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) {
-          return index == 0 ? MyListHeader() : ListPost();
+          return index == 0
+              ? MyListHeader()
+              : Obx(
+                  () => stateController.isCardView.value
+                      ? CardPost()
+                      : ListPost(),
+                );
         },
       ),
     );
